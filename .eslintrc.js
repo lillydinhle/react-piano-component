@@ -14,7 +14,7 @@ module.exports = {
     browser: true,
     jest: true,
   },
-  extends: ['react-app', 'plugin:react/recommended', 'airbnb-base'],
+  extends: ['react-app', 'airbnb-base'],
   plugins: ['react'],
   rules: {
     'react/jsx-closing-bracket-location': ['error', 'line-aligned'],

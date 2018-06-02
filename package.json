@@ -33,6 +33,9 @@
     "copy-webpack-plugin": "^4.3.1",
     "css-loader": "0.28.7",
     "dotenv": "4.0.0",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme-matchers": "^6.0.1",
     "eslint": "4.10.0",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-config-react-app": "^2.0.1",
@@ -46,6 +49,7 @@
     "fs-extra": "3.0.1",
     "html-webpack-plugin": "2.29.0",
     "jest": "20.0.4",
+    "jest-enzyme": "^6.0.1",
     "object-assign": "4.1.1",
     "postcss-flexbugs-fixes": "3.2.0",
     "postcss-loader": "2.0.8",
@@ -67,11 +71,13 @@
     "react-dom": ">=0.14"
   },
   "jest": {
+    "setupTestFrameworkScriptFile": "./node_modules/jest-enzyme/lib/index.js",
     "collectCoverageFrom": [
       "src/**/*.{js,jsx,mjs}"
     ],
     "setupFiles": [
-      "<rootDir>/config/polyfills.js"
+      "<rootDir>/config/polyfills.js",
+      "<rootDir>/config/test/configureEnzyme.js"
     ],
     "testMatch": [
       "<rootDir>/src/**/__tests__/**/*.{js,jsx,mjs}",
