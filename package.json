@@ -19,7 +19,10 @@
   },
   "homepage": "https://github.com/lillydinhle/react-piano-component#readme",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "lodash": "^4.17.10",
+    "soundfont-player": "^0.10.6"
+  },
   "devDependencies": {
     "autoprefixer": "7.1.6",
     "babel-core": "6.26.0",
