@@ -3,12 +3,15 @@ import Instrument from './Instrument';
 import isAccidentalNote from '../utils/isAccidentalNote';
 import getNotesBetween from '../utils/getNotesBetween';
 
-export default function Piano({ startNote, endNote, renderPianoKey }) {
+export default function Piano({
+  startNote, endNote, keyboardMap, renderPianoKey,
+}) {
   const notes = getNotesBetween(startNote, endNote);
 
   return (
     <Instrument
       instrument={'acoustic_grand_piano'}
+      keyboardMap={keyboardMap}
       renderInstrument={({ notesPlaying, onPlayNoteStart, onPlayNoteEnd }) =>
         notes.map(note => (
           <Fragment key={note}>
