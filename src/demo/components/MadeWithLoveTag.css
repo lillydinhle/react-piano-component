@@ -1,0 +1,13 @@
+.made-with-love-tag {
+  font-family: 'Lobster Two', sans-serif;
+  font-weight: normal;
+  color: #fafafa;
+}
+
+.made-with-love-tag__heart {
+  color: #ed5276;
+}
+
+.made-with-love-tag__author-link {
+  color: #fafafa;
+}

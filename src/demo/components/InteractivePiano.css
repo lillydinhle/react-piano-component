@@ -1,0 +1,78 @@
+.interactive-piano__piano-container {
+  display: inline-flex;
+  box-sizing: border-box;
+  border-top: 10px solid #ed5276;
+  position: relative;
+  margin: auto;
+}
+
+.interactive-piano__piano-container::after {
+  content: '';
+  width: 100%;
+  height: 5px;
+  background-color: rgba(68, 68, 68, 0.1);
+  position: absolute;
+  top: 0;
+}
+
+.interactive-piano__accidental-key__wrapper {
+  position: relative;
+  width: 0;
+}
+
+.interactive-piano__accidental-key {
+  position: absolute;
+  transform: translateX(-50%);
+  cursor: pointer;
+  background: #444;
+  width: 36px;
+  height: 120px;
+  border-radius: 0px 0px 3px 3px;
+  border: 3px solid #444;
+  border-top: none;
+  box-sizing: border-box;
+  padding: 5px;
+  outline: none;
+  color: #dbdbdb;
+}
+
+.interactive-piano__accidental-key--playing {
+  background: #ed5276;
+  color: #fff;
+}
+
+.interactive-piano__natural-key {
+  cursor: pointer;
+  background: #fafafa;
+  width: 50px;
+  height: 180px;
+  margin: 0 2px;
+  border-radius: 0 0 3px 3px;
+  border: none;
+  padding: 10px;
+  outline: none;
+  box-sizing: border-box;
+  color: #444;
+}
+
+.interactive-piano__natural-key--playing {
+  border-bottom: 10px solid #ed5276;
+  color: #ed5276;
+}
+
+.interactive-piano__natural-key:first-of-type {
+  margin-left: 0;
+}
+
+.interactive-piano__natural-key:last-of-type {
+  margin-right: 0;
+}
+
+.interactive-piano__text {
+  pointer-events: none;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  font-size: 1rem;
+}
