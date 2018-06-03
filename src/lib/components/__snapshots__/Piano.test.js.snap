@@ -1,0 +1,123 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Piano calls renderPianoKey() with the expected props 1`] = `
+Array [
+  Array [
+    Object {
+      "isNoteAccidental": false,
+      "isNotePlaying": false,
+      "note": "C1",
+      "startPlayingNote": [Function],
+      "stopPlayingNote": [Function],
+    },
+  ],
+  Array [
+    Object {
+      "isNoteAccidental": true,
+      "isNotePlaying": false,
+      "note": "C#1",
+      "startPlayingNote": [Function],
+      "stopPlayingNote": [Function],
+    },
+  ],
+  Array [
+    Object {
+      "isNoteAccidental": false,
+      "isNotePlaying": false,
+      "note": "D1",
+      "startPlayingNote": [Function],
+      "stopPlayingNote": [Function],
+    },
+  ],
+  Array [
+    Object {
+      "isNoteAccidental": true,
+      "isNotePlaying": false,
+      "note": "D#1",
+      "startPlayingNote": [Function],
+      "stopPlayingNote": [Function],
+    },
+  ],
+  Array [
+    Object {
+      "isNoteAccidental": false,
+      "isNotePlaying": false,
+      "note": "E1",
+      "startPlayingNote": [Function],
+      "stopPlayingNote": [Function],
+    },
+  ],
+  Array [
+    Object {
+      "isNoteAccidental": false,
+      "isNotePlaying": false,
+      "note": "F1",
+      "startPlayingNote": [Function],
+      "stopPlayingNote": [Function],
+    },
+  ],
+  Array [
+    Object {
+      "isNoteAccidental": true,
+      "isNotePlaying": false,
+      "note": "F#1",
+      "startPlayingNote": [Function],
+      "stopPlayingNote": [Function],
+    },
+  ],
+  Array [
+    Object {
+      "isNoteAccidental": false,
+      "isNotePlaying": false,
+      "note": "G1",
+      "startPlayingNote": [Function],
+      "stopPlayingNote": [Function],
+    },
+  ],
+  Array [
+    Object {
+      "isNoteAccidental": true,
+      "isNotePlaying": false,
+      "note": "G#1",
+      "startPlayingNote": [Function],
+      "stopPlayingNote": [Function],
+    },
+  ],
+  Array [
+    Object {
+      "isNoteAccidental": false,
+      "isNotePlaying": false,
+      "note": "A1",
+      "startPlayingNote": [Function],
+      "stopPlayingNote": [Function],
+    },
+  ],
+  Array [
+    Object {
+      "isNoteAccidental": true,
+      "isNotePlaying": false,
+      "note": "A#1",
+      "startPlayingNote": [Function],
+      "stopPlayingNote": [Function],
+    },
+  ],
+  Array [
+    Object {
+      "isNoteAccidental": false,
+      "isNotePlaying": false,
+      "note": "B1",
+      "startPlayingNote": [Function],
+      "stopPlayingNote": [Function],
+    },
+  ],
+  Array [
+    Object {
+      "isNoteAccidental": false,
+      "isNotePlaying": false,
+      "note": "C2",
+      "startPlayingNote": [Function],
+      "stopPlayingNote": [Function],
+    },
+  ],
+]
+`;
