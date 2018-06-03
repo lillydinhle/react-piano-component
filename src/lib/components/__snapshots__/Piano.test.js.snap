@@ -6,6 +6,7 @@ Array [
     Object {
       "isNoteAccidental": false,
       "isNotePlaying": false,
+      "keyboardShortcuts": Array [],
       "note": "C1",
       "startPlayingNote": [Function],
       "stopPlayingNote": [Function],
@@ -15,6 +16,7 @@ Array [
     Object {
       "isNoteAccidental": true,
       "isNotePlaying": false,
+      "keyboardShortcuts": Array [],
       "note": "C#1",
       "startPlayingNote": [Function],
       "stopPlayingNote": [Function],
@@ -24,6 +26,7 @@ Array [
     Object {
       "isNoteAccidental": false,
       "isNotePlaying": false,
+      "keyboardShortcuts": Array [],
       "note": "D1",
       "startPlayingNote": [Function],
       "stopPlayingNote": [Function],
@@ -33,6 +36,7 @@ Array [
     Object {
       "isNoteAccidental": true,
       "isNotePlaying": false,
+      "keyboardShortcuts": Array [],
       "note": "D#1",
       "startPlayingNote": [Function],
       "stopPlayingNote": [Function],
@@ -42,6 +46,7 @@ Array [
     Object {
       "isNoteAccidental": false,
       "isNotePlaying": false,
+      "keyboardShortcuts": Array [],
       "note": "E1",
       "startPlayingNote": [Function],
       "stopPlayingNote": [Function],
@@ -51,6 +56,7 @@ Array [
     Object {
       "isNoteAccidental": false,
       "isNotePlaying": false,
+      "keyboardShortcuts": Array [],
       "note": "F1",
       "startPlayingNote": [Function],
       "stopPlayingNote": [Function],
@@ -60,6 +66,7 @@ Array [
     Object {
       "isNoteAccidental": true,
       "isNotePlaying": false,
+      "keyboardShortcuts": Array [],
       "note": "F#1",
       "startPlayingNote": [Function],
       "stopPlayingNote": [Function],
@@ -69,6 +76,7 @@ Array [
     Object {
       "isNoteAccidental": false,
       "isNotePlaying": false,
+      "keyboardShortcuts": Array [],
       "note": "G1",
       "startPlayingNote": [Function],
       "stopPlayingNote": [Function],
@@ -78,6 +86,7 @@ Array [
     Object {
       "isNoteAccidental": true,
       "isNotePlaying": false,
+      "keyboardShortcuts": Array [],
       "note": "G#1",
       "startPlayingNote": [Function],
       "stopPlayingNote": [Function],
@@ -87,6 +96,7 @@ Array [
     Object {
       "isNoteAccidental": false,
       "isNotePlaying": false,
+      "keyboardShortcuts": Array [],
       "note": "A1",
       "startPlayingNote": [Function],
       "stopPlayingNote": [Function],
@@ -96,6 +106,7 @@ Array [
     Object {
       "isNoteAccidental": true,
       "isNotePlaying": false,
+      "keyboardShortcuts": Array [],
       "note": "A#1",
       "startPlayingNote": [Function],
       "stopPlayingNote": [Function],
@@ -105,6 +116,7 @@ Array [
     Object {
       "isNoteAccidental": false,
       "isNotePlaying": false,
+      "keyboardShortcuts": Array [],
       "note": "B1",
       "startPlayingNote": [Function],
       "stopPlayingNote": [Function],
@@ -114,6 +126,7 @@ Array [
     Object {
       "isNoteAccidental": false,
       "isNotePlaying": false,
+      "keyboardShortcuts": Array [],
       "note": "C2",
       "startPlayingNote": [Function],
       "stopPlayingNote": [Function],

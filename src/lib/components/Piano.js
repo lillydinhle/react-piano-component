@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 import Instrument from './Instrument';
 import isAccidentalNote from '../utils/isAccidentalNote';
 import getNotesBetween from '../utils/getNotesBetween';
+import getKeyboardShortcutForNote from '../utils/getKeyboardShortcutsForNote';
 
 export default function Piano({
   startNote, endNote, keyboardMap, renderPianoKey,
@@ -21,6 +22,7 @@ export default function Piano({
               isNotePlaying: notesPlaying.includes(note),
               startPlayingNote: () => onPlayNoteStart(note),
               stopPlayingNote: () => onPlayNoteEnd(note),
+              keyboardShortcuts: getKeyboardShortcutForNote(keyboardMap, note),
             })}
           </Fragment>
         ))
@@ -28,3 +30,7 @@ export default function Piano({
     />
   );
 }
+
+Piano.defaultProps = {
+  keyboardMap: {},
+};
