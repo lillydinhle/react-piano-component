@@ -45,4 +45,7 @@ import Piano from 'react-piano-component';
 />
 ```
 
+## Demo
+https://lillydinhle.github.io/react-piano-component/
+
 ![image](https://user-images.githubusercontent.com/16672756/40879456-05a6ad4c-666e-11e8-854d-9fec442c3fcd.png)
