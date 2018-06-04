@@ -1,6 +1,6 @@
 {
   "name": "react-piano-component",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "A simple and customizable react piano component",
   "main": "build/index.js",
   "scripts": {
