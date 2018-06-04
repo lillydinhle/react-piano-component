@@ -3,7 +3,7 @@ A simple and customizable react piano component
 
 ## Usage
 
-```jsx
+```javascript
 import Piano from 'react-piano-component';
 
 <Piano
