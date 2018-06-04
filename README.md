@@ -1,6 +1,12 @@
 # react-piano-component
 A simple and customizable react piano component
 
+## Installation
+
+```shell
+npm install --save react-piano-component
+```
+
 ## Usage
 
 ```javascript
