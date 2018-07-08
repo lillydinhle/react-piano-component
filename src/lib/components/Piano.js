@@ -5,7 +5,7 @@ import getNotesBetween from '../utils/getNotesBetween';
 import getKeyboardShortcutForNote from '../utils/getKeyboardShortcutsForNote';
 
 export default function Piano({
-  startNote, endNote, keyboardMap, renderPianoKey,
+  CustomAudio, startNote, endNote, keyboardMap, renderPianoKey,
 }) {
   const notes = getNotesBetween(startNote, endNote);
 
@@ -27,6 +27,7 @@ export default function Piano({
           </Fragment>
         ))
       }
+      CustomAudio={CustomAudio}
     />
   );
 }

@@ -66,8 +66,9 @@ export default class Instrument extends Component {
   }
 
   render() {
-    const { instrument, renderInstrument } = this.props;
+    const { instrument, CustomAudio, renderInstrument } = this.props;
     const { notesPlaying } = this.state;
+
     return (
       <Fragment>
         {renderInstrument({
@@ -75,9 +76,18 @@ export default class Instrument extends Component {
           onPlayNoteStart: this.startPlayingNote,
           onPlayNoteEnd: this.stopPlayingNote,
         })}
-        <InstrumentAudio instrument={instrument}
-          notes={notesPlaying}
-        />
+        {
+          !CustomAudio
+            ? (
+              <InstrumentAudio
+                instrument={instrument}
+                notes={notesPlaying}
+              />
+            ) :
+            (
+              <CustomAudio notesPlaying={notesPlaying} />
+            )
+        }
       </Fragment>
     );
   }
