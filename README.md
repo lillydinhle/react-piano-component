@@ -45,6 +45,51 @@ import Piano from 'react-piano-component';
 />
 ```
 
+## Custom instruments
+
+There is the possibility of passing a custom component for playing notes.
+This is an example of a custom one using [ToneJS](https://tonejs.github.io/): 
+
+```js
+import { Component } from 'react';
+import { isEqual } from 'lodash';
+import Tone from 'tone';
+
+export default class InstrumentAudio extends Component {
+  constructor(props) {
+    super(props);
+
+    this.playNotes = this.playNotes.bind(this);
+    this.synth = new Tone.PolySynth(4, Tone.Synth).toMaster();
+  }
+
+  componentDidMount() {
+    this.playNotes();
+  }
+
+  componentDidUpdate(prevProps) {
+    if (!isEqual(this.props.notes, prevProps.notes)) {
+      this.playNotes();
+    }
+  }
+
+  playNotes() {
+    this.synth.triggerAttackRelease(this.props.notes, 0.5);
+  }
+
+  // eslint-disable-next-line class-methods-use-this
+  render() {
+    return null;
+  }
+}
+```
+
+And passed like this to the Piano component (with all the rest of the props).
+
+```js
+<Piano {...props} IntrumentAudio={IntrumentAudio} />
+```
+
 ## Demo
 https://lillydinhle.github.io/react-piano-component/
 
