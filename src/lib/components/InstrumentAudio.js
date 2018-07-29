@@ -39,3 +39,8 @@ export default class InstrumentAudio extends Component {
     return null;
   }
 }
+
+InstrumentAudio.defaultProps = {
+  instrument: 'acoustic_grand_piano',
+  notes: [],
+};
