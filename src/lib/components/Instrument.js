@@ -66,7 +66,7 @@ export default class Instrument extends Component {
   }
 
   render() {
-    const { renderInstrument, CustomAudio: CustomInstrumentAudio } = this.props;
+    const { renderInstrument, renderAudio: CustomInstrumentAudio } = this.props;
     const { notesPlaying } = this.state;
     const AudioComponent = CustomInstrumentAudio || InstrumentAudio;
 

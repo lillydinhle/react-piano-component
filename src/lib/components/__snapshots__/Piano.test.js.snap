@@ -1,5 +1,41 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Piano calls renderAudio() with the expected props 1`] = `
+Array [
+  Array [
+    Object {
+      "notes": Array [],
+    },
+    Object {},
+  ],
+  Array [
+    Object {
+      "notes": Array [
+        "C1",
+      ],
+    },
+    Object {},
+  ],
+  Array [
+    Object {
+      "notes": Array [
+        "C1",
+        "C2",
+      ],
+    },
+    Object {},
+  ],
+  Array [
+    Object {
+      "notes": Array [
+        "C2",
+      ],
+    },
+    Object {},
+  ],
+]
+`;
+
 exports[`Piano calls renderPianoKey() with the expected props 1`] = `
 Array [
   Array [
