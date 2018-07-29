@@ -26,6 +26,16 @@ import Piano from 'react-piano-component';
     Q: 'C4',
   }}
 
+  // (Optional) Customize your audio using `renderAudio`!
+  // `renderAudio(props)` is called whenever notes start or stop playing.
+  renderAudio={
+    ({
+      notes // (Array) An array of the currently playing notes
+    }) => {
+      /* Play the given notes and render the audio (or return null) */
+    }
+  }
+
   // (Required) Customize your piano keys using `renderPianoKey`!
   // `renderPianoKey(props)` is called once per note with the following props:
   renderPianoKey={
@@ -45,39 +55,50 @@ import Piano from 'react-piano-component';
 />
 ```
 
-## Custom instruments
+## Custom Audio
 
-There is the possibility of passing a custom component for playing notes.
-This is an example of a custom one using [ToneJS](https://tonejs.github.io/): 
+`react-piano-component` plays audio out-of-the-box, but it supports custom audio too!
+To customize your audio, define a component that plays the given `notes` and pass that to `renderAudio`.
 
-```js
-import { Component } from 'react';
+This is an example using custom audio with [ToneJS](https://tonejs.github.io/):
+(Special thanks to @giacomorebonato!)
+
+```javascript
+import React, { Component } from 'react';
 import { isEqual } from 'lodash';
 import Tone from 'tone';
 
-export default class InstrumentAudio extends Component {
+class InstrumentAudio extends Component {
   constructor(props) {
     super(props);
-
-    this.playNotes = this.playNotes.bind(this);
     this.synth = new Tone.PolySynth(4, Tone.Synth).toMaster();
   }
 
   componentDidMount() {
-    this.playNotes();
+    this.startPlayingNotes(this.props.notes);
   }
 
   componentDidUpdate(prevProps) {
-    if (!isEqual(this.props.notes, prevProps.notes)) {
-      this.playNotes();
+    const notes = this.props.notes;
+    const prevNotes = prevProps.notes;
+
+    if (!isEqual(notes, prevNotes)) {
+      const startedNotes = getStartedNotes(notes, prevNotes);
+      this.startPlayingNotes(startedNotes);
+
+      const stoppedNotes = getStoppedNotes(notes, prevNotes);
+      this.stopPlayingNotes(stoppedNotes);
     }
   }
 
-  playNotes() {
-    this.synth.triggerAttackRelease(this.props.notes, 0.5);
+  startPlayingNotes(startedNotes) {
+    this.synth.triggerAttack(startedNotes);
   }
 
-  // eslint-disable-next-line class-methods-use-this
+  stopPlayingNotes(stoppedNotes) {
+    this.synth.triggerRelease(stoppedNotes);
+  }
+
   render() {
     return null;
   }
@@ -86,8 +107,8 @@ export default class InstrumentAudio extends Component {
 
 And passed like this to the Piano component (with all the rest of the props).
 
-```js
-<Piano {...props} IntrumentAudio={IntrumentAudio} />
+```javascript
+<Piano {...props} playAudio={InstrumentAudio} />
 ```
 
 ## Demo
