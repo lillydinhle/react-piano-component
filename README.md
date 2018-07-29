@@ -1,5 +1,6 @@
 # react-piano-component
-A simple and customizable react piano component
+A simple and customizable react piano component  
+Demo: https://lillydinhle.github.io/react-piano-component/
 
 ## Installation
 
@@ -110,8 +111,5 @@ And passed like this to the Piano component (with all the rest of the props).
 ```javascript
 <Piano {...props} playAudio={InstrumentAudio} />
 ```
-
-## Demo
-https://lillydinhle.github.io/react-piano-component/
 
 ![image](https://user-images.githubusercontent.com/16672756/40879456-05a6ad4c-666e-11e8-854d-9fec442c3fcd.png)
