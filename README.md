@@ -58,18 +58,19 @@ import Piano from 'react-piano-component';
 
 ## Custom Audio
 
-`react-piano-component` plays audio out-of-the-box, but it supports custom audio too!
+`react-piano-component` plays MP3 audio out-of-the-box, but it supports custom audio too!
 To customize your audio, define a component that plays the given `notes` and pass that to `renderAudio`.
 
-This is an example using custom audio with [ToneJS](https://tonejs.github.io/):
+This is an example using custom audio with a [Tone.js](https://tonejs.github.io/) synthesizer
 (Special thanks to @giacomorebonato!)
+You can further customize the sound of the instrument by using the Tone.js [sampler](https://tonejs.github.io/examples/sampler.html).
 
 ```javascript
 import React, { Component } from 'react';
-import { isEqual } from 'lodash';
+import { isEqual, difference } from 'lodash';
 import Tone from 'tone';
 
-class InstrumentAudio extends Component {
+class Audio extends Component {
   constructor(props) {
     super(props);
     this.synth = new Tone.PolySynth(4, Tone.Synth).toMaster();
@@ -84,10 +85,10 @@ class InstrumentAudio extends Component {
     const prevNotes = prevProps.notes;
 
     if (!isEqual(notes, prevNotes)) {
-      const startedNotes = getStartedNotes(notes, prevNotes);
+      const startedNotes = difference(notes, prevNotes);
       this.startPlayingNotes(startedNotes);
 
-      const stoppedNotes = getStoppedNotes(notes, prevNotes);
+      const stoppedNotes = difference(prevNotes, notes);
       this.stopPlayingNotes(stoppedNotes);
     }
   }
@@ -109,7 +110,7 @@ class InstrumentAudio extends Component {
 And passed like this to the Piano component (with all the rest of the props).
 
 ```javascript
-<Piano {...props} playAudio={InstrumentAudio} />
+<Piano {...props} renderAudio={Audio} />
 ```
 
 ![image](https://user-images.githubusercontent.com/16672756/40879456-05a6ad4c-666e-11e8-854d-9fec442c3fcd.png)
